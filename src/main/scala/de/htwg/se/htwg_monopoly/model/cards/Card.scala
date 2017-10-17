@@ -1,5 +1,5 @@
 package de.htwg.se.htwg_monopoly.model.cards
 
-class Card(function: () => Any) {
+case class Card(function: () => Any) {
 
 }

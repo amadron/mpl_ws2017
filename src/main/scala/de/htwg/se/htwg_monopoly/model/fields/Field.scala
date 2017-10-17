@@ -1,5 +1,5 @@
 package de.htwg.se.htwg_monopoly.model.fields
 
-class Field(groupName: String) {
+case class Field(name: String, groupName: String, prices: Array[Int]) {
 
 }
