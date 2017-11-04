@@ -6,14 +6,12 @@ import play.api.libs.json.Json
 object Util {
 
   def getFieldFromJSON(jString : String) : Field = {
-
-    val json = Json.parse(jString)
-
-    val name = (json \ "name").as[String]
-    val groupName = (json \ "groupName").as[String]
-    val prices = (json \ "prices").as[Prices]
-    val status = (json \ "status").as[String]
-    val field = Field(name, groupName, prices, status)
-    field
+    val json = Json.parse(jString);
+    val name = (json \ "name").as[String];
+    val groupName = (json \ "groupName").as[String];
+    val price = (json \ "prices").as[Prices];
+    val status = (json \ "status").as[String];
+    val field = new Field(name, groupName, null, status);
+    return field
   }
 }
