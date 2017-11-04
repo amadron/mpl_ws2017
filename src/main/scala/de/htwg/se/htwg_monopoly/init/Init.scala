@@ -10,6 +10,8 @@ object Init {
     println("Init 2")
     val player1 = Player("Player1")
     val player2 = Player("Player2")
+    player1.addField(Field("Fieldname","grp",Prices(1,2,Array(1,2,3,4,5)),"owned"))
+    println("test")
     val players = Array(player1, player2)
     val cardsCommunity = new Array[Card](2)
     val cardsEvent = new Array[Card](2)

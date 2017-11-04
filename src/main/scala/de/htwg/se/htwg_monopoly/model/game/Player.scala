@@ -2,10 +2,12 @@ package de.htwg.se.htwg_monopoly.model.game
 
 import de.htwg.se.htwg_monopoly.model.fields.Field
 
+import scala.collection.mutable.ListBuffer
+
 case class Player(name: String) {
-  val money: Int = 5000
+  var money: Int = 5000
   val currentFieldIndex = 0
-  val ownFields: Array[Field] = new Array[Field](0)
+  var ownFields: ListBuffer[Field] = ListBuffer()
 
   def isBancrupt(): Boolean = {
     if (money <= 0) {
@@ -21,7 +23,17 @@ case class Player(name: String) {
     }
   }
 
-  def buyField(field: Field): Unit = {
+  def buyField(field: Field): Boolean = {
+    if(field.prices.buyPrice <= money) {
+      addField(field)
+      money -= field.prices.buyPrice
+      true
+    } else {
+      false
+    }
+  }
 
+  def addField(field:Field): Unit = {
+    ownFields.+=:(field)
   }
 }

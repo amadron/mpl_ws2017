@@ -21,8 +21,9 @@ case class Controller(game: Game) {
   }
 
   def getWinner() : Player = {
-    for(player <- game.players if !player.isBancrupt())
-      return player;
+    val winnerList = game.players.filter(!_.isBancrupt())
+    assert(winnerList.length == 0)
+    winnerList(0)
   }
 
 }

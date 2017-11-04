@@ -6,10 +6,10 @@ val player = Player("horst")
 
 val price = Prices(1,2,Array(1,2,3,4,5))
 
-player.ownFields
-
 val field = Field("teststr","testgruppe",price,"owned")
 
 player.addField(field)
+player.addField(field)
 
-player.ownFields
+player.ownFields.size
+
