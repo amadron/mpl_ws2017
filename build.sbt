@@ -11,6 +11,7 @@ libraryDependencies ++= {
   val scalaMockV       = "3.2.2"
   Seq(
     "org.scalatest" %% "scalatest"                   % scalaTestV       % "test",
-    "org.scalamock" %% "scalamock-scalatest-support" % scalaMockV       % "test"
+    "org.scalamock" %% "scalamock-scalatest-support" % scalaMockV       % "test",
+    "com.typesafe.play" %% "play-json" % "2.6.6"
   )
 }
