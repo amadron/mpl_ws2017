@@ -23,6 +23,10 @@ case class Player(name: String) {
     }
   }
 
+  def removeField(field: Field): Unit = {
+    ownFields -= field
+  }
+
   def buyField(field: Field): Boolean = {
     if(field.prices.buyPrice <= money) {
       addField(field)

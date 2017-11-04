@@ -13,3 +13,8 @@ player.addField(field)
 
 player.ownFields.size
 
+player.removeField(field)
+player.removeField(field)
+player.removeField(field)
+
+player.ownFields.size
