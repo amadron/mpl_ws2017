@@ -8,10 +8,10 @@ case class Player(name: String) {
   val ownFields: Array[Field] = new Array[Field](0)
 
   def isBancrupt(): Boolean = {
-    if( money <= 0) {
+    if (money <= 0) {
       var checker = false
-      ownFields.foreach((field:Field) => {
-        if(field.status != "mortgage") {
+      ownFields.foreach((field: Field) => {
+        if (field.status != "mortgage") {
           checker = true
         }
       })
@@ -19,5 +19,9 @@ case class Player(name: String) {
     } else {
       false
     }
+  }
+
+  def buyField(field: Field): Unit = {
+
   }
 }
