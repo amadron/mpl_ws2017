@@ -9,7 +9,7 @@ object UtilWorksheet {
     "\"monopolyPrice\":10000,\n" +
     "\"housePrices\":[100,100,100,100,100]\n" +
     "},\n" +
-    "\"status\":\"Nope\",\n" +
+    "\"status\":\"Nope\"\n" +
     "}"
   val field = Util.getFieldFromJSON(json);
 
