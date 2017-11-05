@@ -13,7 +13,7 @@ object Util {
     val groupName = (json \ "groupName").as[String];
     val price = (json \ "prices").as[Prices];
     val status = (json \ "status").as[String];
-    val field = new Field(name, groupName, null, status);
+    val field = new Field(name, groupName, price, status);
     return field
   }
 
