@@ -1,0 +1,10 @@
+{
+"name": "Field1",
+"groupName": "Test",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+},
+"status":"None"
+}
