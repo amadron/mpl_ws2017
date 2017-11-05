@@ -12,5 +12,6 @@ object UtilWorksheet {
     "\"status\":\"Nope\"\n" +
     "}"
   val field = Util.getFieldFromJSON(json);
+  val file = Util.getFileContent("fields/field1")
 
 }

@@ -3,6 +3,8 @@ package de.htwg.se.htwg_monopoly.model.util
 import de.htwg.se.htwg_monopoly.model.fields.{Field, Prices}
 import play.api.libs.json.Json
 
+import scala.io.Source
+
 object Util {
 
   def getFieldFromJSON(jString : String) : Field = {
@@ -13,5 +15,12 @@ object Util {
     val status = (json \ "status").as[String];
     val field = new Field(name, groupName, null, status);
     return field
+  }
+
+  def getFileContent(filename: String) : String = {
+    val file = Source.fromInputStream(getClass().getClassLoader().getResourceAsStream(filename))
+    val filecontent = file.getLines().mkString
+    file.close()
+    return filecontent
   }
 }
