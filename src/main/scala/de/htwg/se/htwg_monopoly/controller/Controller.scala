@@ -1,8 +1,8 @@
 package de.htwg.se.htwg_monopoly.controller
 
-import de.htwg.se.htwg_monopoly.model.fields.{Field, Prices}
 import de.htwg.se.htwg_monopoly.model.game.{Game, Player}
-import play.api.libs.json.{JsValue, Json}
+
+import scala.util.Random
 
 case class Controller(game: Game) {
 
@@ -26,4 +26,16 @@ case class Controller(game: Game) {
     winnerList(0)
   }
 
+  def rollDice() : Int = {
+    val random = Random
+    random.nextInt(7)
+  }
+
+  def getNextFieldToMove(currentField: Int, toMove: Int, maxFields: Int) : Int =
+  {
+    var nextField = currentField + toMove
+    if(nextField > maxFields)
+      nextField = nextField - maxFields
+    nextField
+  }
 }

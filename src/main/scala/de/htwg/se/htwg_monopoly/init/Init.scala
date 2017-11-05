@@ -21,5 +21,10 @@ object Init {
     val gameField = GameField(4, communityStack, eventStack, groups)
     val game = Game(gameField, players)
     val controller = Controller(game)
+
+    val current = 5
+    val maxFieldNo = 8
+    val toMove = 3
+    print("Next field: " + controller.getNextFieldToMove(current, toMove, maxFieldNo))
   }
 }
