@@ -1,6 +1,6 @@
 package de.htwg.se.htwg_monopoly.view.tui
 
-import de.htwg.se.htwg_monopoly.controller.Controller
+import de.htwg.se.htwg_monopoly.controller.{Controller, GameState}
 import de.htwg.se.htwg_monopoly.model.fields.Field
 
 case class Tui(controller: Controller) {
@@ -8,7 +8,18 @@ case class Tui(controller: Controller) {
   println("Welcome to HTWG-Monopoly!")
 
   while (true) {
+    val state = controller.gameState
     val input = scala.io.StdIn.readLine()
+    state match {
+      case GameState.Init => getInputForStart(input)
+      case GameState.BeforeRoll => getInputForBeforeRoll(input)
+      case _ => println("Unknown State" + state)
+    }
+
+
+  }
+
+  def getInputForStart(input: String): Unit = {
     input match {
       case "exit" => System.exit(1)
       case "field" => printField()
@@ -17,6 +28,17 @@ case class Tui(controller: Controller) {
       case _ => println("unknown Command: " + input)
     }
   }
+
+  def getInputForBeforeRoll(input: String): Unit = {
+    input match {
+      case "exit" => System.exit(1)
+      case "field" => printField()
+      case "status" => printStatus()
+      case "roll" => controller.letsRoll()
+      case _ => println("unknown Command: " + input)
+    }
+  }
+
 
   def printStatus(): Unit = {
     val player = controller.getCurrentPlayer()

@@ -8,6 +8,8 @@ case class Controller(game: Game) {
 
   val max_dice_role = 13
 
+  var gameState = GameState.Init
+
   def getNoOfBankrupt() : Int = {
     var counter = 0
     for(player <- game.players if player.isBancrupt())
@@ -31,6 +33,7 @@ case class Controller(game: Game) {
 
   def letsRoll(): Unit = {
     val roleValue = rollDice()
+
 
   }
 
