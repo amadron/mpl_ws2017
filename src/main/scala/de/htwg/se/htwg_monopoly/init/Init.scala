@@ -1,9 +1,9 @@
 package de.htwg.se.htwg_monopoly.init
 
 import de.htwg.se.htwg_monopoly.controller.Controller
-import de.htwg.se.htwg_monopoly.model.cards.{ Card, Stack }
-import de.htwg.se.htwg_monopoly.model.fields.{ Field, FieldGroup, Prices }
-import de.htwg.se.htwg_monopoly.model.game.{ Game, GameField, Player }
+import de.htwg.se.htwg_monopoly.model.cards.{Card, Stack}
+import de.htwg.se.htwg_monopoly.model.fields.{Field, FieldGroup, Prices}
+import de.htwg.se.htwg_monopoly.model.game.{Game, GameField, Player}
 import de.htwg.se.htwg_monopoly.view.tui.Tui
 
 object Init {
@@ -22,10 +22,7 @@ object Init {
     val game = Game(gameField, players)
     val controller = Controller(game)
 
-    val current = 5
-    val maxFieldNo = 6
-    val toMove = 3
-    println("Rounds: " + controller.getRounds(current, toMove, maxFieldNo))
+
 
     val tui: Tui = Tui(controller)
   }

@@ -1,0 +1,80 @@
+{
+"name": "Field1",
+"groupName": "Test",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field2",
+"groupName": "Test",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field3",
+"groupName": "Test1",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field4",
+"groupName": "Test1",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field5",
+"groupName": "Test",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field6",
+"groupName": "Test",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field7",
+"groupName": "Test2",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+;
+{
+"name": "Field8",
+"groupName": "Test2",
+"prices": {
+"buyPrice": 5000,
+"monopolyPrice": 10000,
+"housePrices": [100,100,100,100,100]
+}
+}
+

@@ -1,8 +1,9 @@
 package de.htwg.se.htwg_monopoly.model.util
 
-import de.htwg.se.htwg_monopoly.model.fields.{Field, Prices}
+import de.htwg.se.htwg_monopoly.model.fields.{Field, FieldGroup, Prices}
 import play.api.libs.json.Json
 
+import scala.collection.mutable
 import scala.io.Source
 
 object Util {
@@ -12,7 +13,6 @@ object Util {
     val name = (json \ "name").as[String];
     val groupName = (json \ "groupName").as[String];
     val price = (json \ "prices").as[Prices];
-    val status = (json \ "status").as[String];
     val field = new Field(name, groupName, price);
     field
   }
@@ -22,5 +22,27 @@ object Util {
     val filecontent = file.getLines().mkString
     file.close()
     filecontent
+  }
+
+  def getGroups(fieldList: List[Field]) : Array[FieldGroup] = {
+    var groupMap = new mutable.HashMap[String, mutable.Set[Field]]() with mutable.MultiMap[String, Field]
+    for(field <- fieldList)
+      groupMap addBinding(field.groupName, field)
+    var groupList = scala.collection.mutable.ListBuffer.empty[FieldGroup]
+    groupMap.keys.foreach( (gnames) => {
+      val mEntry = groupMap(gnames).toArray[Field]
+      val group =  FieldGroup(mEntry)
+      groupList += group
+    })
+    groupList.toArray[FieldGroup]
+  }
+
+  def createFieldGroups(): Array[FieldGroup] = {
+    val fContent = getFileContent("field")
+    val splitStr = fContent.split(";")
+    var fieldList = scala.collection.mutable.ListBuffer.empty[Field]
+    for(str <- splitStr)
+      fieldList += getFieldFromJSON(str)
+    getGroups(fieldList.toList)
   }
 }
