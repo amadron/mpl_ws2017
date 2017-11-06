@@ -6,18 +6,21 @@ import scala.util.Random
 
 case class Controller(game: Game) {
 
+  val max_dice_role = 13
+
   def getNoOfBankrupt() : Int = {
-    var counter = 0;
+    var counter = 0
     for(player <- game.players if player.isBancrupt())
-      counter += 1;
-    return counter;
+      counter += 1
+    counter
   }
 
   def isGameFinished(): Boolean = {
-    if (getNoOfBankrupt() == game.players.size - 1)
-      return true;
-    else
-      return false;
+    if (getNoOfBankrupt() == game.players.size - 1) {
+      true
+    } else {
+      false
+    }
   }
 
   def getWinner() : Player = {
@@ -26,9 +29,14 @@ case class Controller(game: Game) {
     winnerList(0)
   }
 
+  def letsRoll(): Unit = {
+    val roleValue = rollDice()
+
+  }
+
   def rollDice() : Int = {
     val random = Random
-    random.nextInt(7)
+    random.nextInt(max_dice_role) + 1
   }
 
   def getNextFieldToMove(currentField: Int, toMove: Int, maxFields: Int) : Int =
@@ -38,5 +46,9 @@ case class Controller(game: Game) {
 
   def getRounds(currentField: Int, toMove: Int, maxFields: Int) : Int = {
     (toMove + currentField) /  maxFields
+  }
+
+  def getCurrentPlayer(): Player = {
+    game.getCurrentPlayer()
   }
 }
