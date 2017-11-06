@@ -13,14 +13,14 @@ object Util {
     val groupName = (json \ "groupName").as[String];
     val price = (json \ "prices").as[Prices];
     val status = (json \ "status").as[String];
-    val field = new Field(name, groupName, price, status);
-    return field
+    val field = new Field(name, groupName, price);
+    field
   }
 
   def getFileContent(filename: String) : String = {
     val file = Source.fromInputStream(getClass().getClassLoader().getResourceAsStream(filename))
     val filecontent = file.getLines().mkString
     file.close()
-    return filecontent
+    filecontent
   }
 }

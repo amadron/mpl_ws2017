@@ -6,7 +6,7 @@ val player = Player("horst")
 
 val price = Prices(1,2,Array(1,2,3,4,5))
 
-val field = Field("teststr","testgruppe",price,"owned")
+val field = Field("teststr","testgruppe",price)
 
 player.addField(field)
 player.addField(field)
