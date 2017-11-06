@@ -33,9 +33,6 @@ case class Controller(game: Game) {
 
   def getNextFieldToMove(currentField: Int, toMove: Int, maxFields: Int) : Int =
   {
-    var nextField = currentField + toMove
-    if(nextField > maxFields)
-      nextField = nextField - maxFields
-    nextField
+    (currentField + toMove) % maxFields
   }
 }

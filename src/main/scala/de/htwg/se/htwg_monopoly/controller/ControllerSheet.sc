@@ -2,7 +2,7 @@ import de.htwg.se.htwg_monopoly.controller.Controller
 
 val current = 5
 val maxFieldNo = 6
-val toMove = 3
+val toMove = 0
 var controller = Controller(null)
-val nextField = controller.getNextFieldToMove(current, toMove, maxFieldNo)
+val nextField = (current + toMove) % maxFieldNo
 
