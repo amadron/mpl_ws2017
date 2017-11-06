@@ -6,20 +6,10 @@ import collection.mutable
 
 object UtilWorksheet {
 
-  var groupMap = new mutable.HashMap[Int, mutable.Set[Int]]() with mutable.MultiMap[Int, Int]
-  groupMap addBinding (1, 1)
-  groupMap addBinding (1, 2)
-  groupMap addBinding (1, 3)
-  groupMap(1).toList
-
-  /*
-  val fContent = getFileContent("field")
-  val splitStr = fContent.split(";")
-  var fieldList = scala.collection.mutable.ListBuffer.empty[Field]
-  for(str <- splitStr) {
-    //println(str)
-    fieldList += getFieldFromJSON(str)
-  }
-  getGroups(fieldList.toList)
-  */
+  val gameField = Util.createGameField()
+  println("Size:"+ gameField.eventStack.cards.length)
+  for(card <- gameField.eventStack.cards)
+    card.cardFunction()
+  gameField.eventStack
+  gameField.fieldGroups
 }

@@ -1,6 +1,8 @@
 package de.htwg.se.htwg_monopoly.model.util
 
+import de.htwg.se.htwg_monopoly.model.cards.{Card, Stack}
 import de.htwg.se.htwg_monopoly.model.fields.{Field, FieldGroup, Prices}
+import de.htwg.se.htwg_monopoly.model.game.GameField
 import play.api.libs.json.Json
 
 import scala.collection.mutable
@@ -45,4 +47,27 @@ object Util {
       fieldList += getFieldFromJSON(str)
     getGroups(fieldList.toList)
   }
+
+  def createCommunityStack(): Stack = {
+    val cardArr = scala.collection.mutable.ArrayBuffer.empty[Card]
+    for(i <- 1 until 10)
+      cardArr += Card(() => {println("Community Card " + i + " Function")})
+    Stack(cardArr.toArray)
+  }
+
+  def createEventStack(): Stack = {
+    val cardArr = scala.collection.mutable.ArrayBuffer.empty[Card]
+    for(i <- 1 until 10)
+      cardArr += Card(() => {println("Event Card " + i + " Function")})
+    Stack(cardArr.toArray)
+  }
+
+
+  def createGameField(): GameField = {
+    val fieldGroups = createFieldGroups
+    val communityStack = createCommunityStack
+    val eventStack = createEventStack
+    GameField(2, communityStack, eventStack, fieldGroups)
+  }
+
 }

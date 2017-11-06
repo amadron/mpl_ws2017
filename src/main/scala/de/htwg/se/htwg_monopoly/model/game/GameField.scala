@@ -9,7 +9,6 @@ case class GameField(sideRow: Int, communityStack: Stack, eventStack: Stack, fie
     var result = 0
     for(group <- fieldGroups)
       result += group.fields.length
-
     result
   }
 
