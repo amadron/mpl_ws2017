@@ -25,6 +25,6 @@ object Init {
     val current = 5
     val maxFieldNo = 6
     val toMove = 3
-    print("Next field: " + controller.getNextFieldToMove(current, toMove, maxFieldNo))
+    print("Rounds: " + controller.getRounds(current, toMove, maxFieldNo))
   }
 }

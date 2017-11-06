@@ -35,4 +35,8 @@ case class Controller(game: Game) {
   {
     (currentField + toMove) % maxFields
   }
+
+  def getRounds(currentField: Int, toMove: Int, maxFields: Int) : Int = {
+    (toMove + currentField) /  maxFields
+  }
 }
