@@ -1,17 +1,163 @@
 {
-  "name": "Secretariat",
-  "groupName": "Brown",
-  "prices": {
-    "buyPrice": 5000,
-    "monopolyPrice": 10000,
-    "buyHousePrice": 5000,
-    "mortgageValue": 500,
-    "housePrices": [
-      100,
-      100,
-      100,
-      100,
-      100
-    ]
-  }
+  "rowLength": 6,
+  "fieldList": [
+    {
+      "name": "Secreteriat",
+      "groupName": "Braun",
+      "prices": {
+        "buyPrice": 60,
+        "rent": 2,
+        "monopolyPrice": 4,
+        "buyHousePrice": 50,
+        "mortgageValue": 30,
+        "housePrices": [10,30,90,160,250]
+      }
+    },
+    {
+      "name": "HTWG-Shop",
+      "groupName": "Braun",
+      "prices": {
+        "buyPrice": 60,
+        "rent": 4,
+        "monopolyPrice": 8,
+        "buyHousePrice": 50,
+        "mortgageValue": 30,
+        "housePrices": [20,60,180,320,450]
+      }
+    },
+    {
+      "name": "C-107",
+      "groupName": "Hellblau",
+      "prices": {
+        "buyPrice": 100,
+        "rent": 6,
+        "monopolyPrice": 12,
+        "buyHousePrice": 50,
+        "mortgageValue": 50,
+        "housePrices": [30,90,270,400,550]
+      }
+    },
+    {
+      "name": "C-108",
+      "groupName": "Hellblau",
+      "prices": {
+        "buyPrice": 100,
+        "rent": 6,
+        "monopolyPrice": 12,
+        "buyHousePrice": 50,
+        "mortgageValue": 50,
+        "housePrices": [30,90,270,400,550]
+      }
+    },
+    {
+      "name": "C-109",
+      "groupName": "Hellblau",
+      "prices": {
+        "buyPrice": 120,
+        "rent": 8,
+        "monopolyPrice": 16,
+        "buyHousePrice": 50,
+        "mortgageValue": 60,
+        "housePrices": [40,100,300,450,600]
+      }
+    },
+    {
+      "name": "L-303",
+      "groupName": "Pink",
+      "prices": {
+        "buyPrice": 140,
+        "rent": 10,
+        "monopolyPrice": 20,
+        "buyHousePrice": 100,
+        "mortgageValue": 70,
+        "housePrices": [
+          50,
+          150,
+          450,
+          625,
+          750
+        ]
+      }
+    },
+    {
+      "name": "L-Cafe",
+      "groupName": "Pink",
+      "prices": {
+        "buyPrice": 140,
+        "rent": 10,
+        "monopolyPrice": 20,
+        "buyHousePrice": 100,
+        "mortgageValue": 70,
+        "housePrices": [50,150,450,625,750]
+      }
+    },
+    {
+      "name": "L-Kino",
+      "groupName": "Pink",
+      "prices": {
+        "buyPrice": 160,
+        "rent": 12,
+        "monopolyPrice": 24,
+        "buyHousePrice": 100,
+        "mortgageValue": 80,
+        "housePrices": [
+          60,
+          180,
+          500,
+          700,
+          900
+        ]
+      }
+    },
+    {
+      "name": "A-001",
+      "groupName": "Orange",
+      "prices": {
+        "buyPrice": 180,
+        "rent": 14,
+        "monopolyPrice": 28,
+        "buyHousePrice": 100,
+        "mortgageValue": 90,
+        "housePrices": [
+          70,
+          200,
+          550,
+          750,
+          950
+        ]
+      }
+    },
+    {
+      "name": "A-002",
+      "groupName": "Orange",
+      "prices": {
+        "buyPrice": 180,
+        "rent": 14,
+        "monopolyPrice": 28,
+        "buyHousePrice": 100,
+        "mortgageValue": 90,
+        "housePrices": [
+          70,
+          200,
+          550,
+          750,
+          950
+        ]
+      }
+    },
+    {
+      "name": "A-003",
+      "groupName": "Orange",
+      "prices": {
+        "buyPrice": 200,
+        "rent": 16,
+        "monopolyPrice": 32,
+        "buyHousePrice": 100,
+        "mortgageValue": 100,
+        "housePrices": [
+          80,220,600,800,1000
+        ]
+      }
+    }
+  ]
 }

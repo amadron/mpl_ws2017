@@ -3,6 +3,7 @@ package de.htwg.se.htwg_monopoly.model.util
 import de.htwg.se.htwg_monopoly.model.cards.{Card, Stack}
 import de.htwg.se.htwg_monopoly.model.fields.{Field, FieldGroup, Prices}
 import de.htwg.se.htwg_monopoly.model.game.GameField
+import play.api.libs.json
 import play.api.libs.json.Json
 
 import scala.collection.mutable
@@ -12,12 +13,16 @@ object Util {
 
   def getFieldFromJSON(jString : String) : Field = {
     val json = Json.parse(jString)
+    println(json)
     val name = (json \ "name").as[String]
     val groupName = (json \ "groupName").as[String]
     val price = (json \ "prices").as[Prices]
+    val  testPrice = (json \ "testPrice").as[Prices]
     val field = Field(name, groupName, price)
     field
   }
+
+
 
   def getFileContent(filename: String) : String = {
     val file = Source.fromInputStream(getClass().getClassLoader().getResourceAsStream(filename))
@@ -39,12 +44,23 @@ object Util {
     groupList.toArray[FieldGroup]
   }
 
+  def readHTWGMonopoly(): GameInput = {
+    val fContent = getFileContent("htwg-monopoly.json")
+    val json = Json.parse(fContent)
+    val rowLength = (json \ "rowLength").as[Int]
+    val fieldList = (json \ "fieldList").as[Array[Field]]
+    GameInput(rowLength)
+  }
+
   def createFieldGroups(): Array[FieldGroup] = {
     val fContent = getFileContent("field.json")
+
     val splitStr = fContent.split(";")
     var fieldList = scala.collection.mutable.ListBuffer.empty[Field]
-    for(str <- splitStr)
+    for(str <- splitStr) {
+      println(str)
       fieldList += getFieldFromJSON(str)
+    }
     getGroups(fieldList.toList)
   }
 

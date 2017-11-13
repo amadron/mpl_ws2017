@@ -8,3 +8,14 @@ case class Field(name: String, groupName: String, prices: Prices) {
     name + " " + status
   }
 }
+
+object Field {
+  import play.api.libs.json._
+  import play.api.libs.functional.syntax._
+
+  implicit val fieldRead: Reads[Field] = (
+      (JsPath \ "name").read[String] and
+      (JsPath \ "groupName").read[String] and
+      (JsPath \ "prices").read[Prices]
+    )(Field.apply _)
+}
