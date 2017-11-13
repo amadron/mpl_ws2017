@@ -8,7 +8,7 @@ case class Controller(game: Game) {
 
   val max_dice_role = 13
 
-  var gameState = GameState.Init
+  val gameState = GameState.Init
 
   def getNoOfBankrupt() : Int = {
     var counter = 0
