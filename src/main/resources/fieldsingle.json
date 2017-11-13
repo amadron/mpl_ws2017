@@ -4,6 +4,8 @@
 "prices": {
 "buyPrice": 5000,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }

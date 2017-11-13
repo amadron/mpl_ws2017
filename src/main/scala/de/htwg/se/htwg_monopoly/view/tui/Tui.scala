@@ -22,7 +22,7 @@ case class Tui(controller: Controller) {
   def getInputForStart(input: String): Unit = {
     input match {
       case "exit" => System.exit(1)
-      case "field" => printField()
+      case "field.json" => printField()
       case "status" => printStatus()
       case "roll" => controller.letsRoll()
       case _ => println("unknown Command: " + input)
@@ -32,7 +32,7 @@ case class Tui(controller: Controller) {
   def getInputForBeforeRoll(input: String): Unit = {
     input match {
       case "exit" => System.exit(1)
-      case "field" => printField()
+      case "field.json" => printField()
       case "status" => printStatus()
       case "roll" => controller.letsRoll()
       case _ => println("unknown Command: " + input)

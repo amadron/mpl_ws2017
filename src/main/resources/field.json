@@ -3,7 +3,10 @@
 "groupName": "Test",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -13,7 +16,10 @@
 "groupName": "Test",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -23,7 +29,10 @@
 "groupName": "Test1",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -33,7 +42,10 @@
 "groupName": "Test1",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -43,7 +55,10 @@
 "groupName": "Test",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -53,7 +68,10 @@
 "groupName": "Test",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -63,7 +81,10 @@
 "groupName": "Test2",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }
@@ -73,7 +94,10 @@
 "groupName": "Test2",
 "prices": {
 "buyPrice": 5000,
+"rent": 20,
 "monopolyPrice": 10000,
+"buyHousePrice": 5000,
+"mortgageValue": 500,
 "housePrices": [100,100,100,100,100]
 }
 }

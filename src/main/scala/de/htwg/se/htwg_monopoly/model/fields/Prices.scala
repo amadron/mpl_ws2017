@@ -1,12 +1,7 @@
 package de.htwg.se.htwg_monopoly.model.fields
 
-import de.htwg.se.htwg_monopoly.model.util.TestObject
-import play.api.libs.json.Reads
-
-case class Prices(buyPrice: Int, monopolyPrice: Int, housePrices: Array[Int]) {
-
-
-  assert(housePrices.length == 5);
+case class Prices(buyPrice: Int, rent: Int, monopolyPrice: Int, buyHousePrice: Int, mortgageValue: Int ,housePrices: Array[Int] ) {
+  assert(housePrices.length == 5)
 }
 
 object Prices {
@@ -15,7 +10,10 @@ object Prices {
 
   implicit val pricesRead: Reads[Prices] = (
     (JsPath \ "buyPrice").read[Int] and
-      (JsPath \ "monopolyPrice").read[Int] and
-      (JsPath \ "housePrices").read[Array[Int]]
+    (JsPath \ "rent").read[Int] and
+    (JsPath \ "monopolyPrice").read[Int] and
+    (JsPath \ "buyHousePrice").read[Int] and
+    (JsPath \ "mortgageValue").read[Int] and
+    (JsPath \ "housePrices").read[Array[Int]]
     )(Prices.apply _)
 }

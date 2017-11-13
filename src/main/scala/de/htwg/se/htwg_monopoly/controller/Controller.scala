@@ -34,7 +34,6 @@ case class Controller(game: Game) {
   def letsRoll(): Unit = {
     val roleValue = rollDice()
 
-
   }
 
   def rollDice() : Int = {

@@ -11,11 +11,11 @@ import scala.io.Source
 object Util {
 
   def getFieldFromJSON(jString : String) : Field = {
-    val json = Json.parse(jString);
-    val name = (json \ "name").as[String];
-    val groupName = (json \ "groupName").as[String];
-    val price = (json \ "prices").as[Prices];
-    val field = new Field(name, groupName, price);
+    val json = Json.parse(jString)
+    val name = (json \ "name").as[String]
+    val groupName = (json \ "groupName").as[String]
+    val price = (json \ "prices").as[Prices]
+    val field = Field(name, groupName, price)
     field
   }
 
@@ -40,7 +40,7 @@ object Util {
   }
 
   def createFieldGroups(): Array[FieldGroup] = {
-    val fContent = getFileContent("field")
+    val fContent = getFileContent("field.json")
     val splitStr = fContent.split(";")
     var fieldList = scala.collection.mutable.ListBuffer.empty[Field]
     for(str <- splitStr)
