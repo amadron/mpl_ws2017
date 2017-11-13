@@ -8,8 +8,8 @@ import de.htwg.se.htwg_monopoly.view.tui.Tui
 
 object Init {
   def main(args: Array[String]): Unit = {
-    val player1 = Player("Player1")
-    val player2 = Player("Player2")
+    val player1 = Player("Player1", 5000, 0, List())
+    val player2 = Player("Player2", 5000, 0, List())
     player1.addField(Field("Fieldname1","grp1",Prices(1,2,3,4,5,Array(1,2,3,4,5))))
     player1.addField(Field("Fieldname2","grp2",Prices(1,2,3,4,5,Array(1,2,3,4,5))))
     val players = Array(player1, player2)

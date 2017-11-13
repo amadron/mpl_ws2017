@@ -20,6 +20,10 @@ case class Player(name: String, money: Int, currentFieldIndex: Int,ownFields: Li
     }
   }
 
+  def setField(newField: Int): Player = {
+    this.copy(currentFieldIndex = newField)
+  }
+
   def removeField(field: Field): Player = {
     this.copy(ownFields = this.ownFields.filter(!_.equals(field)))
   }

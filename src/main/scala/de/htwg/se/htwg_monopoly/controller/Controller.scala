@@ -4,9 +4,10 @@ import de.htwg.se.htwg_monopoly.model.game.{Game, Player}
 
 import scala.util.Random
 
-case class Controller(game: Game) {
-
+case class Controller(ngame: Game) {
+  var game = ngame
   val max_dice_role = 13
+  val roundBonus = 5000
 
   val gameState = GameState.Init
 
@@ -33,7 +34,11 @@ case class Controller(game: Game) {
 
   def letsRoll(): Unit = {
     val roleValue = rollDice()
-
+    val maxFields = game.gameField.getNumberOfFields()
+    var currPlayer = game.getCurrentPlayer()
+    val nextFieldIndex = getNextFieldToMove(currPlayer.currentFieldIndex, roleValue, maxFields)
+    val newCurrPlayer = currPlayer.setField(nextFieldIndex)
+    game = game.setCurrentPlayer(newCurrPlayer)
   }
 
   def rollDice() : Int = {

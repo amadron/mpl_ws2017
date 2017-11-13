@@ -7,4 +7,9 @@ case class Game(gameField: GameField, players: Array[Player]) {
     players(currentPlayerIndex)
   }
 
+  def setCurrentPlayer(player: Player): Game = {
+    val newArray = players.updated(currentPlayerIndex, player)
+    this.copy(players = newArray)
+  }
+
 }
