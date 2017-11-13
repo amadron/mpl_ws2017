@@ -8,8 +8,7 @@ object UtilWorksheet {
 
   val gameField = Util.createGameField()
   println("Size:"+ gameField.eventStack.cards.length)
-  for(card <- gameField.eventStack.cards)
-    card.cardFunction()
+  gameField.eventStack.cards.foreach((card) => {card.cardFunction()})
   gameField.eventStack
   gameField.fieldGroups
 }
