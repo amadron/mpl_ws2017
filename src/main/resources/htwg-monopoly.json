@@ -158,6 +158,160 @@
           80,220,600,800,1000
         ]
       }
+    },
+    {
+      "name": "G-149",
+      "groupName": "Rot",
+      "prices": {
+        "buyPrice": 220,
+        "rent": 18,
+        "monopolyPrice": 36,
+        "buyHousePrice": 150,
+        "mortgageValue": 110,
+        "housePrices": [
+          90,250,700,875,1050
+        ]
+      }
+    },
+    {
+      "name": "G-205",
+      "groupName": "Rot",
+      "prices": {
+        "buyPrice": 220,
+        "rent": 18,
+        "monopolyPrice": 36,
+        "buyHousePrice": 150,
+        "mortgageValue": 110,
+        "housePrices": [
+          90,250,700,875,1050
+        ]
+      }
+    },
+    {
+      "name": "G-Innenhof",
+      "groupName": "Rot",
+      "prices": {
+        "buyPrice": 240,
+        "rent": 20,
+        "monopolyPrice": 40,
+        "buyHousePrice": 150,
+        "mortgageValue": 120,
+        "housePrices": [
+          100,300,750,925,110
+        ]
+      }
+    },
+    {
+      "name": "P-101",
+      "groupName": "Gelb",
+      "prices": {
+        "buyPrice": 260,
+        "rent": 22,
+        "monopolyPrice": 44,
+        "buyHousePrice": 150,
+        "mortgageValue": 130,
+        "housePrices": [
+          110,330,800,975,1150
+        ]
+      }
+    },
+    {
+      "name": "P-102",
+      "groupName": "Gelb",
+      "prices": {
+        "buyPrice": 260,
+        "rent": 22,
+        "monopolyPrice": 44,
+        "buyHousePrice": 150,
+        "mortgageValue": 130,
+        "housePrices": [
+          110,330,800,975,1150
+        ]
+      }
+    },
+    {
+      "name": "P-103",
+      "groupName": "Gelb",
+      "prices": {
+        "buyPrice": 280,
+        "rent": 24,
+        "monopolyPrice": 48,
+        "buyHousePrice": 150,
+        "mortgageValue": 140,
+        "housePrices": [
+          120,360,850,1025,1200
+        ]
+      }
+    },
+    {
+      "name": "F-033",
+      "groupName": "Grün",
+      "prices": {
+        "buyPrice": 300,
+        "rent": 26,
+        "monopolyPrice": 52,
+        "buyHousePrice": 200,
+        "mortgageValue": 150,
+        "housePrices": [
+          130,390,900,1100,1275
+        ]
+      }
+    },
+    {
+      "name": "F-034",
+      "groupName": "Grün",
+      "prices": {
+        "buyPrice": 300,
+        "rent": 26,
+        "monopolyPrice": 52,
+        "buyHousePrice": 200,
+        "mortgageValue": 150,
+        "housePrices": [
+          130,390,900,1100,1275
+        ]
+      }
+    },
+    {
+      "name": "F-035",
+      "groupName": "Grün",
+      "prices": {
+        "buyPrice": 320,
+        "rent": 28,
+        "monopolyPrice": 56,
+        "buyHousePrice": 200,
+        "mortgageValue": 160,
+        "housePrices": [
+          150,450,1000,1200,1400
+        ]
+      }
+    },
+    {
+      "name": "Aula",
+      "groupName": "Blau",
+      "prices": {
+        "buyPrice": 350,
+        "rent": 35,
+        "monopolyPrice": 70,
+        "buyHousePrice": 200,
+        "mortgageValue": 175,
+        "housePrices": [
+          175,500,1100,1300,1500
+        ]
+      }
+    },
+    {
+      "name": "Villa Rheinburg",
+      "groupName": "Blau",
+      "prices": {
+        "buyPrice": 400,
+        "rent": 50,
+        "monopolyPrice": 100,
+        "buyHousePrice": 200,
+        "mortgageValue": 200,
+        "housePrices": [
+          200,600,1400,1700,2000
+        ]
+      }
     }
   ]
 }
