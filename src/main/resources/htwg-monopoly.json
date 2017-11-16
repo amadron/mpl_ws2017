@@ -1,5 +1,13 @@
 {
-  "rowLength": 6,
+  "rowLength": 7,
+  "stations": {
+    "names": ["Europahaus", "Paradies", "TBH", "AMH"],
+    "stationPrices": [25,50,75,100],
+    "buyPrice": 200,
+    "mortgageValue": 100
+  },
+  "taxesStart": 200,
+  "taxesEnd": 400,
   "fieldList": [
     {
       "name": "Secreteriat",

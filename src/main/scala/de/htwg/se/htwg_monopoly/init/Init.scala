@@ -14,6 +14,7 @@ object Init {
     player1.addField(Field("Fieldname2","grp2",Prices(1,2,3,4,5,Array(1,2,3,4,5))))
     val players = Array(player1, player2)
     val game = readHTWGMonopoly()
+    println(game)
     println("done")
     /*
     val gameField = createGameField()

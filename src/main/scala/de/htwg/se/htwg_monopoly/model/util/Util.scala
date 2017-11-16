@@ -1,7 +1,7 @@
 package de.htwg.se.htwg_monopoly.model.util
 
 import de.htwg.se.htwg_monopoly.model.cards.{Card, Stack}
-import de.htwg.se.htwg_monopoly.model.fields.{Field, FieldGroup, Prices}
+import de.htwg.se.htwg_monopoly.model.fields.{Field, FieldGroup, Prices, Stations}
 import de.htwg.se.htwg_monopoly.model.game.GameField
 import play.api.libs.json
 import play.api.libs.json.Json
@@ -44,25 +44,18 @@ object Util {
     groupList.toArray[FieldGroup]
   }
 
-  def readHTWGMonopoly(): GameInput = {
+  def readHTWGMonopoly(): GameField = {
     val fContent = getFileContent("htwg-monopoly.json")
     val json = Json.parse(fContent)
     val rowLength = (json \ "rowLength").as[Int]
     val fieldList = (json \ "fieldList").as[Array[Field]]
-    GameInput(rowLength)
+    val stations = (json \ "stations").as[Stations]
+    val taxesStart = (json \ "taxesStart").as[Int]
+    val taxesEnd = (json \ "taxesEnd").as[Int]
+    println(stations)
+    GameField(rowLength,createCommunityStack(),createEventStack(),getGroups(fieldList.toList),taxesStart,taxesEnd)
   }
 
-  def createFieldGroups(): Array[FieldGroup] = {
-    val fContent = getFileContent("field.json")
-
-    val splitStr = fContent.split(";")
-    var fieldList = scala.collection.mutable.ListBuffer.empty[Field]
-    for(str <- splitStr) {
-      println(str)
-      fieldList += getFieldFromJSON(str)
-    }
-    getGroups(fieldList.toList)
-  }
 
   def createCommunityStack(): Stack = {
     val cardArr = scala.collection.mutable.ArrayBuffer.empty[Card]
@@ -78,12 +71,5 @@ object Util {
     Stack(cardArr.toArray)
   }
 
-
-  def createGameField(): GameField = {
-    val fieldGroups = createFieldGroups
-    val communityStack = createCommunityStack
-    val eventStack = createEventStack
-    GameField(2, communityStack, eventStack, fieldGroups)
-  }
 
 }
